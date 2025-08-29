@@ -237,14 +237,15 @@ section {
     @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
   }
   /* Make the old wide black bar inert (keeps class name if referenced elsewhere) */
-  .timeline {
-    @apply absolute left-1/2 -translate-x-1/2 w-[2px] bg-white/10;
-    top: 6rem; /* 🔥 pushes the line down (~96px, adjust as needed) */
-    bottom: 0; /* still reaches the bottom of the section */
+  /* Update your CSS file with these changes */
+  .timeline-container {
+    @apply absolute h-full z-0 hidden xl:flex;
+    left: calc(100% / 2); /* push to end of left column */
+    transform: translateX(0); /* remove center translate */
   }
 
   .timeline-progress {
-    @apply origin-top absolute inset-0 mx-auto w-[2px] rounded-full;
+    @apply origin-top absolute inset-0  mx-auto w-[2px] rounded-full;
     background: linear-gradient(
       to bottom,
       #62e0ff,
@@ -256,7 +257,6 @@ section {
     background-size: 200% 200%;
     animation: gradientShift 6s linear infinite;
   }
-
   @keyframes gradientShift {
     0% {
       background-position: 0% 0%;
@@ -267,15 +267,26 @@ section {
   }
 
   .timeline-glow {
-    @apply absolute inset-0 mx-auto w-6 bg-purple-500/20 blur-xl rounded-full;
+    @apply absolute inset-0 mx-auto w-6 pl-2 bg-purple-500/20 blur-xl rounded-full;
   }
 
   .timeline-track {
     @apply bg-white/10;
   }
+
+  .timeline-logo {
+    /* Correctly position the logo on top of the timeline */
+    @apply absolute -left-5 -top-5 z-40; /* Adjust these values to position correctly */
+  }
+
+  .timeline-column {
+    @apply relative; /* This is the main container for the timeline elements */
+  }
+
   /* Logo chip: remove the black circle */
   .timeline-logo {
-    @apply flex-none rounded-full p-0 ring-1 ring-white/10 bg-transparent;
+    @apply relative z-40 flex items-center justify-center;
+    margin-left: -1.25rem; /* shift left so it overlaps timeline */
   }
 
   .exp-card-wrapper {

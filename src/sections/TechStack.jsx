@@ -3,6 +3,7 @@ import Techicon from "../components/models/TechLogos/Techicon";
 import TitleHeader from "../components/TitleHeader";
 import { techStackIcons } from "../constants/index";
 import { gsap } from "gsap";
+import LazyTechicon from "../components/models/TechLogos/LazyTechIcon";
 const TechStack = () => {
   useGSAP(() => {
     gsap.fromTo(
