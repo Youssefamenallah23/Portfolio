@@ -87,9 +87,9 @@ export default function Experience() {
               {expCards.map((card, index) => (
                 <div
                   key={`exp-${index}`}
-                  className="exp-card-wrapper flex flex-col xl:flex-row gap-5 xl:gap-10 items-start"
+                  className="exp-card-wrapper flex flex-col  2xl:flex-row gap-5 xl:gap-10 2xl:items-start"
                 >
-                  <div className="xl:w-1/3">
+                  <div className="2xl:w-1/3">
                     <GlowCard card={card} index={index}>
                       <div>
                         <img src={card.imgPath} alt="experience" />
@@ -97,7 +97,7 @@ export default function Experience() {
                     </GlowCard>
                   </div>
                   <div className="xl:w-2/3 max-w-3xl flex items-start">
-                    <div className="timeline-logo mr-3 relative z-40">
+                    <div className=" mr-3 relative z-40">
                       <img
                         src={card.logoPath}
                         alt="logo"
@@ -123,13 +123,13 @@ export default function Experience() {
               {achievements.map((achievement, index) => (
                 <div
                   key={`ach-${index}`}
-                  className="exp-card-wrapper flex flex-col xl:flex-row gap-5 xl:gap-10 items-start"
+                  className="exp-card-wrapper flex flex-col 2xl:flex-row gap-5 xl:gap-10 2xl:items-start "
                 >
-                  <div className="xl:w-1/3">
+                  <div className="2xl:w-1/3">
                     <AchievementCard achievement={achievement} index={index} />
                   </div>
-                  <div className="xl:w-2/3 max-w-3xl flex items-start">
-                    <div className="timeline-logo mr-3 relative z-40">
+                  <div className="2xl:w-2/3 max-w-3xl flex items-start ">
+                    <div className="mr-3 relative z-40 max-md:hidden">
                       <img
                         src={achievement.logoPath}
                         alt="logo"
@@ -161,17 +161,17 @@ export default function Experience() {
               {education.map((edu, index) => (
                 <div
                   key={`edu-${index}`}
-                  className="exp-card-wrapper flex flex-col xl:flex-row gap-5 xl:gap-10 items-stretch"
+                  className="exp-card-wrapper flex flex-col 2xl:flex-row gap-5 xl:gap-10 items-stretch"
                 >
-                  <div className="xl:w-1/3 flex justify-center xl:justify-start items-center">
+                  <div className="2xl:w-1/3 flex justify-center xl:justify-start ">
                     <EducationCard className="w-full" edu={edu} index={index} />
                   </div>
-                  <div className="xl:w-2/3 max-w-3xl flex items-start">
-                    <div className="timeline-logo mr-3 relative z-40">
+                  <div className="2xl:w-2/3 max-w-3xl flex items-start">
+                    <div className=" mr-3 relative z-40 max-md:hidden">
                       <img
                         src={edu.eduPath}
                         alt="logo"
-                        className="w-10 h-10 md:w-16 md:h-16 object-contain"
+                        className="w-10 h-10 md:w-16 md:h-16 object-contain "
                       />
                     </div>
                     <div className="max-w-2xl">
