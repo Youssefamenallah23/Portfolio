@@ -23,7 +23,7 @@ const EducationCard = ({ edu, children, index }) => {
 
   return (
     <div
-      className="card card-border timeline-card rounded-xl p-10 w-full"
+      className="card card-border timeline-card rounded-xl p-10 w-full max-h-fit"
       ref={cardRef} // Assign the local ref
       onMouseMove={handleMouseMove}
     >

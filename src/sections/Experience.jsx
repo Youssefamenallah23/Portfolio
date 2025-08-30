@@ -164,9 +164,13 @@ export default function Experience() {
                   className="exp-card-wrapper flex flex-col 2xl:flex-row gap-5 xl:gap-10 items-stretch"
                 >
                   <div className="2xl:w-1/3 flex justify-center xl:justify-start ">
-                    <EducationCard className="w-full" edu={edu} index={index} />
+                    <EducationCard
+                      className="w-full max-h-fit"
+                      edu={edu}
+                      index={index}
+                    />
                   </div>
-                  <div className="2xl:w-2/3 max-w-3xl flex items-start">
+                  <div className="xl:w-2/3 max-w-3xl flex items-start">
                     <div className=" mr-3 relative z-40 max-md:hidden">
                       <img
                         src={edu.eduPath}
